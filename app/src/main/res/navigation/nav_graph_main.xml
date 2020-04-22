@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="fr.useless.depdero.ui.main.MainFragment"
+        android:label="@string/screenname_main"
+        tools:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/action_mainFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="fr.useless.depdero.ui.form.FormFragment"
+        android:label="@string/screenname_form"
+        tools:layout="@layout/form_fragment">
+
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/mainFragment"
+            android:id="@+id/action_formFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+
+        <deepLink app:uri="depdero://form" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="fr.useless.depdero.ui.settings.SettingsFragment"
+        android:label="@string/screenname_settings">
+
+        <deepLink app:uri="depdero://settings" />
+
+    </fragment>
+
+</navigation>

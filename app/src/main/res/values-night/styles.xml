@@ -1,0 +1,73 @@
+<resources>
+
+    <style name="Theme.DepDero" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- Original AppCompat attributes -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+
+        <item name="fontFamily">@font/product_sans_regular</item>
+
+        <!-- MaterialComponents attributes -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorPrimarySurface">@color/color_2_1</item>
+        <item name="colorOnPrimary">@color/color_1_1</item> <!-- BAD -->
+
+        <item name="colorSecondary">@color/color_3_1</item>
+        <item name="colorSecondaryVariant">@color/color_3_0</item>
+        <item name="colorOnSecondary">@android:color/white</item> <!-- BAD -->
+
+        <item name="colorError">@android:color/holo_red_light</item>
+        <item name="colorOnError">@android:color/white</item> <!-- BAD -->
+
+        <item name="colorSurface">#252343</item>
+        <item name="colorOnSurface">@color/color_1_1</item> <!-- BAD -->
+
+        <item name="colorOnBackground">@android:color/black</item> <!-- BAD -->
+
+        <item name="textAppearanceHeadline6">@style/TextAppearance.DepDero.Headline6</item>
+
+        <item name="radioButtonStyle">@style/DepDero.CompoundButton.RadioButton</item>
+        <item name="checkboxStyle">@style/DepDero.CompoundButton.Checkbox</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+
+    </style>
+
+    <style name="PreferenceTheme" parent="PreferenceThemeOverlay">
+        <item name="android:tint">@color/color_1_2</item>
+    </style>
+
+    <style name="TextAppearance.DepDero.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">#b397e5</item>
+    </style>
+
+    <style name="Widget.DepDero.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="helperTextTextAppearance">@style/DepDero.TextAppearance.Design.HelperText</item>
+        <item name="helperTextTextColor">@color/color_1_2</item>
+    </style>
+
+    <style name="DepDero.TextAppearance.Design.HelperText" parent="TextAppearance.Design.HelperText">
+        <item name="fontFamily">@font/product_sans_italic</item>
+    </style>
+
+    <style name="DepDero.TextAppearance.Disclaimer" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/color_1_1</item>
+        <item name="android:background">@color/soft_background</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/product_sans_bold</item>
+    </style>
+
+    <style name="DepDero.CompoundButton.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@color/color_1_1</item>
+    </style>
+
+    <style name="DepDero.CompoundButton.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@color/color_1_1</item>
+    </style>
+
+</resources>

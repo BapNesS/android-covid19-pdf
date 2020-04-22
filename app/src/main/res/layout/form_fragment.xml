@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="128dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/DepDero.TextAppearance.Disclaimer"
+                android:padding="32dp"
+                android:id="@+id/discaimerDescription"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/disclaimer_description"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/formTitleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_min="48dp"
+                android:layout_marginTop="24dp"
+                style="@style/TextAppearance.DepDero.Headline6"
+                app:layout_constraintTop_toBottomOf="@id/discaimerDescription"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@id/resetBtn"
+                android:text="@string/form_title"
+                />
+
+            <ImageView
+                android:contentDescription="@string/reset_form"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/surface_rippled_rounded"
+                android:id="@+id/resetBtn"
+                android:padding="8dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/formTitleTv"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/formTitleTv"
+                app:layout_constraintTop_toTopOf="@+id/formTitleTv"
+                app:srcCompat="@drawable/ic_clear_rounded" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userFirstNameEt"
+                android:layout_width="0dp"
+                android:layout_marginTop="16dp"
+
+                android:layout_height="wrap_content"
+                android:hint="@string/title_name"
+                app:helperText="@string/hint_name"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@id/userLastnameEt"
+                app:layout_constraintTop_toBottomOf="@+id/formTitleTv" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginEnd="4dp"
+                    android:autofillHints="personGivenName"
+                    android:inputType="textPersonName|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userLastnameEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_lastname"
+                app:helperText="@string/hint_lastname"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toEndOf="@id/userFirstNameEt"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/userFirstNameEt">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginStart="4dp"
+                    android:autofillHints="personFamilyName"
+                    android:inputType="textPersonName|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Birth -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/birthCityEt"
+                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_birth_city"
+                app:helperText="@string/hint_birth_city"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/userFirstNameEt" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPostalAddress|textCapWords"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/birthDateEt"
+                android:layout_marginTop="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_birth_date"
+                app:helperText="@string/hint_birth_date"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/birthCityEt" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="date"
+                    android:focusable="false"
+
+                    android:autofillHints="birthDateFull"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Address Street -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressStreetEt"
+                android:layout_marginTop="32dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_address_street"
+                app:helperText="@string/hint_address_street"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/birthDateEt" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPostalAddress"
+                    android:autofillHints="postalAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Address Zipcode -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressZipcodeEt"
+                android:layout_marginTop="4dp"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_address_zipcode"
+                app:helperText="@string/hint_address_zipcode"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@id/addressCityEt"
+                app:layout_constraintTop_toBottomOf="@id/addressStreetEt" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPostalAddress"
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Address City -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressCityEt"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_address_city"
+                app:helperText="@string/hint_address_city"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toEndOf="@id/addressZipcodeEt"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/addressStreetEt" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPostalAddress|textCapWords"
+                    android:autofillHints="addressLocality"
+                    android:layout_marginStart="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/reasonTitleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                style="@style/TextAppearance.DepDero.Headline6"
+                app:layout_constraintTop_toBottomOf="@id/addressCityEt"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                android:text="@string/reason_title"
+                />
+
+            <RadioGroup
+                android:id="@+id/radios"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reasonTitleTv"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                >
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="16dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioTravail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioCourses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioSante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioFamille"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioSport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioJudiciaire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_marginTop="12dp"
+                    tools:text="a\nb\nc\nd"
+                    android:id="@+id/radioMissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/departureDateEt"
+                android:layout_marginTop="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_departure_date"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@id/departureHourEt"
+                app:layout_constraintTop_toBottomOf="@id/radios" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginEnd="4dp"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/departureHourEt"
+                android:layout_marginTop="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_departure_hour"
+                style="@style/Widget.DepDero.TextInputLayout.OutlinedBox"
+
+                app:layout_constraintStart_toEndOf="@id/departureDateEt"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/radios" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginStart="4dp"
+                    android:inputType="date"
+                    android:focusableInTouchMode="false"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/soft_background"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/departureDateEt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/wantSaveDatas"
+                android:layout_marginTop="38dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save_datas"
+
+                app:layout_constraintStart_toEndOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/departureDateEt" />
+
+
+            <Button
+                android:layout_marginTop="12dp"
+                android:id="@+id/generateBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_generate"
+                app:layout_constraintTop_toBottomOf="@+id/wantSaveDatas"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_bottom"
+                app:layout_constraintGuide_end="32dp"
+                android:orientation="horizontal"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_start"
+                app:layout_constraintGuide_begin="32dp"
+                android:orientation="vertical"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_end"
+                app:layout_constraintGuide_end="32dp"
+                android:orientation="vertical"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

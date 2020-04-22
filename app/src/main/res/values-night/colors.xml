@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/color_2_1</color>
+    <color name="colorPrimaryDark">@color/color_2_0</color>
+    <color name="colorAccent">@color/color_3_1</color>
+    <color name="colorBackground">#121212</color>
+    <color name="shortcutColor">@color/color_3_2</color>
+
+
+    <color name="color_1_3">#77C0B1EC</color>
+    <color name="color_1_2">#afb0b1</color>
+    <color name="color_1_1">#E1FFFFFF</color>
+
+
+    <color name="color_2_3">#938EFF</color>
+    <color name="color_2_2">#5E57FF</color>
+    <color name="color_2_1">#938EFF</color>
+    <color name="color_2_0">#141329</color>
+
+    <color name="color_3_3">#ffc7c9</color>
+    <color name="color_3_2">#fe9ea0</color>
+    <color name="color_3_1">#ff7a7c</color>
+    <color name="color_3_0">#D85D5F</color>
+
+    <color name="color_4_3">#d5dde4</color>
+    <color name="color_4_2">#b0bbc9</color>
+    <color name="color_4_1">#909caa</color>
+
+    <color name="soft_background">#2F938EFF</color>
+</resources>

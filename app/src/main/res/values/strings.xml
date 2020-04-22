@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Attestations déplacement dérogatoires</string>
+    <string name="error_all_fields_required">Tous les champs sont obligatoire</string>
+    <string name="clean_datas_success">Données supprimées</string>
+
+    <string name="screenname_main">Déplacement dérogatoire</string>
+    <string name="screenname_form">Nouvelle attestation</string>
+
+    <string name="hint_address_street">ex. : 999 avenue de france</string>
+    <string name="hint_address_city">ex. : Paris</string>
+    <string name="hint_address_zipcode">ex. : 75001</string>
+    <string name="hint_birth_date">Ex : 01/01/1970</string>
+    <string name="hint_birth_city">ex. : Lyon</string>
+    <string name="hint_lastname">ex. : Dupont</string>
+    <string name="hint_name">ex. : Jean</string>
+    <string name="title_address_street">Adresse</string>
+    <string name="title_address_city">Ville</string>
+    <string name="title_address_zipcode">Code postal</string>
+    <string name="title_birth_date">Date de naissance</string>
+    <string name="title_birth_city">Lieu de naissance</string>
+    <string name="title_lastname">Nom</string>
+    <string name="title_name">Prénom</string>
+    <string name="disclaimer_description">Les données saisies sont stockées exclusivement sur votre téléphone. Aucune information n\'est collectée.\n\nL\'attestation pdf générée contient un QR Code. Ce code-barres graphique permet de lire les informations portées dans votre attestation au moment de leur saisie. Il peut être déchiffré à l\'aide de tout type de lecteur de QR code générique.</string>
+    <string name="form_title">Remplissez votre attestation numérique</string>
+    <string name="reason_title">Choisissez un motif de sortie</string>
+    <string name="title_departure_date">Date de sortie</string>
+    <string name="title_departure_hour">Heure de sortie</string>
+    <string name="channel_name">Attestation</string>
+    <string name="channel_description">Notifications affichées après la génération de l\'attestion au format PDF</string>
+    <string name="notification_title">Attestation générée</string>
+    <string name="notification_short_description">Fichier généré sur votre appareil :</string>
+    <string name="notification_long_description">Fichier généré sur votre appareil à l\'emplacement suivant :\n</string>
+    <string name="btn_generate">Générer mon PDF</string>
+    <string name="btn_generating">En cours…</string>
+    <string name="screenname_settings">Préférences</string>
+    <string name="share_description">J\'utilise cette application pour générer mon attestion de déplacement dérogatoire :</string>
+    <string name="cgu_url">http://useless.hopto.org/privacy_attest_policy.html</string>
+    <string name="settings_share_title">Partager l\'application</string>
+    <string name="settings_share_summary">Faites-en profiter d\'autres personnes</string>
+    <string name="settings_category_misc">Divers</string>
+    <string name="settings_cgu_title">Politique de confidentialité</string>
+    <string name="settings_category_datas">Données</string>
+    <string name="settings_cleandatas_title">Supprimer mes données</string>
+    <string name="settings_cleandatas_summary">Les données sont stockées exclusivement sur le téléphone</string>
+    <string name="home_subtitle">Remplissez votre attestation numérique et générer un PDF avec/sans QRCode</string>
+    <string name="home_title">Attestation de déplacement dérogatoire</string>
+    <string name="home_lastfile">Ma dernière attestation</string>
+    <string name="store_permission_required">La permission est nécessaire pour stocker votre attestation</string>
+    <string name="goodwill_alert_message">Attention, pendant le confinement, minimiser vos déplacements.</string>
+    <string name="goodwill_action_button">Continuer</string>
+    <string name="create_pdf_chooser">Sélectionnez l\'application pour ouvrir le PDF</string>
+    <string name="reset_form">Vider le formulaire</string>
+    <string name="save_datas">Sauvegarder mes informations pour mon prochain déplacement (uniquement sur cet appareil).</string>
+    <string name="github_url">https://github.com/BapNesS/android-covid19-pdf</string>
+    <string name="github_access">Sources GitHub</string>
+</resources>

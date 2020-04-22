@@ -1,0 +1,6 @@
+rootProject.name='Depdero'
+include ':app'
+include ':lib-storage'
+include ':lib-core'
+include ':lib-pdf'
+include ':lib-notification'

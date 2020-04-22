@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+def keystoreFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystoreFile))
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    defaultConfig {
+        applicationId "fr.useless.depdero"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "androidx.appcompat:appcompat:${rootProject.lib_version_appcompat}"
+    implementation "androidx.preference:preference:${rootProject.lib_version_appcompat}"
+    implementation "androidx.core:core-ktx:${rootProject.lib_version_corektx}"
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.google.android.material:material:${rootProject.lib_version_materialcomponent}"
+
+    // MVVM tools
+    implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.lib_version_lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.lib_version_lifecycle}"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${rootProject.lib_version_nav}"
+    implementation "androidx.navigation:navigation-ui-ktx:${rootProject.lib_version_nav}"
+
+    // Générateur de QR Code
+    implementation 'com.google.zxing:core:3.2.0'
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation 'com.github.kenglxn.QRGen:android:2.6.0'
+
+
+    implementation "com.jakewharton.timber:timber:${rootProject.lib_version_timber}"
+
+    implementation project(':lib-storage')
+    implementation project(':lib-pdf')
+    implementation project(':lib-notification')
+    api project(':lib-core')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

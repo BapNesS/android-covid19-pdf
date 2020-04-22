@@ -1,0 +1,7 @@
+<resources>
+    <string name="channel_name">Attestation</string>
+    <string name="channel_description">Notifications affichées après la génération de l\'attestion au format PDF</string>
+    <string name="notification_title">Attestation générée</string>
+    <string name="notification_short_description">Fichier généré sur votre appareil :</string>
+    <string name="notification_long_description">Fichier généré sur votre appareil à l\'emplacement suivant :\n</string>
+</resources>

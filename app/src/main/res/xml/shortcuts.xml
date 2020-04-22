@@ -1,0 +1,34 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="form"
+        android:enabled="true"
+        android:icon="@mipmap/ic_shortcut_form"
+        android:shortcutShortLabel="@string/screenname_form"
+        android:shortcutLongLabel="@string/screenname_form">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="fr.useless.depdero"
+            android:targetClass="fr.useless.depdero.MainActivity"
+            android:data="depdero://form" />
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="settings"
+        android:enabled="true"
+        android:icon="@mipmap/ic_shortcut_settings"
+        android:shortcutShortLabel="@string/screenname_settings"
+        android:shortcutLongLabel="@string/screenname_settings">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="fr.useless.depdero"
+            android:targetClass="fr.useless.depdero.MainActivity"
+            android:data="depdero://settings" />
+
+    </shortcut>
+
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="@string/settings_category_datas">
+
+        <Preference
+            app:icon="@drawable/ic_delete_rounded"
+            app:key="cleanDatas"
+            app:title="@string/settings_cleandatas_title"
+            app:summary="@string/settings_cleandatas_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/settings_category_misc">
+
+        <Preference
+            app:icon="@drawable/ic_share_rounded"
+            app:key="share"
+            app:title="@string/settings_share_title"
+            app:summary="@string/settings_share_summary" />
+
+        <Preference
+            app:icon="@drawable/ic_language_rounded"
+            app:key="cgu"
+            app:title="@string/settings_cgu_title" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/cgu_url" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/ic_language_rounded"
+            app:key="cgu"
+            app:title="@string/github_access" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/github_url" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
