@@ -23,10 +23,15 @@ Aussi, **le fichier APK d'installation est disponible sur la page [releases](htt
 
 ## Fonctionnalités
 ✅ Formulaire de saisie
+
 ✅ Génération de PDF avec QRCode
+
 ✅ L'accès au dernier PDF généré sur l'accueil et en notification
+
 ✅ Case à cocher dans le formulaire : *conserver mes informations d'identification sur le téléphone*. Cela permet de pré-remplir le formulaire et de ne resaisir que le motif de la sortie.
+
 ✅ Suppression des informations stockées dans les préférences
+
 ✅ Trois raccourcis sur l'icône pour accéder plus rapidement aux fonctionnalités : nouveau formulaire, dernier PDF géré, préférences
 
 ### Détails
