@@ -140,7 +140,7 @@ class FormViewModel(application: Application) : AndroidViewModel(application) {
         val departureDate = departure.dateDay
         val departureHour = departure.dateHours
 
-        return "Cree le: $creationDateString; Nom: ${userValue()?.userName}; Prenom: ${userValue()?.userLastname}; Naissance: ${userValue()?.birthDate} a ${userValue()?.birthCity}; Adresse: ${userValue()?.addressStreet} ${userValue()?.addressZipcode} ${userValue()?.addressCity}; Sortie: $departureDate a ${departureHour}; Motifs: ${departure.reason?.qrCodeValue}"
+        return "Cree le: $creationDateString; Nom: ${userValue()?.userLastname}; Prenom: ${userValue()?.userName}; Naissance: ${userValue()?.birthDate} a ${userValue()?.birthCity}; Adresse: ${userValue()?.addressStreet} ${userValue()?.addressZipcode} ${userValue()?.addressCity}; Sortie: $departureDate a ${departureHour}; Motifs: ${departure.reason?.qrCodeValue}"
     }
 
 
