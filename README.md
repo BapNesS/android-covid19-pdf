@@ -1,6 +1,15 @@
+# :construction: Déprécié
 
+> Suite au déconfinement du **11/05/2020**, cette application n'est plus utilisable.
+>
+> L'attestation inclue dans ce projet n'a pas été mise à jour.
+>
+> Pour plus d'informations, veuillez suivre les informations issues du site https://www.gouvernement.fr/info-coronavirus.
+>
+> Merci
 
 # android-covid19-pdf
+
 🏠 *On est confinés.*
 
 ### Contexte
